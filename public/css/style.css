@@ -1,0 +1,382 @@
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: var(--Gris-claro);
+}
+
+strong {
+    font-size: 12px;
+}
+
+header {
+    background-color: var(--Amarillo);
+    padding: 15px 20px;
+}
+
+header div.top-header {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.top-header div.logo {
+    width: 50%;
+    max-width: 200px;
+}
+
+div.top-header form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+div.top-header form input {
+    width: 100%;
+    max-width: max-content;
+    border-radius: 5px;
+    border: solid 1px var(--Gris-claro);
+    height: 20px;
+    margin-left: 10px;
+}
+
+div.top-header form i {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--Gris-claro);
+    font-size: 14px;
+    text-align: center;
+    padding: 3px 0px;
+    border-radius: 5px;
+}
+
+div.top-header div.purchase-mode {
+    text-align: center;
+}
+
+header nav {
+    display: none;
+    font-size: 12px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header nav ul li a i {
+    margin-left: 2px;
+}
+
+header div.burger-menu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.burger-menu div {
+    display: inline-block;
+    background-color: var(--Celeste);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div.burger-menu div i {
+    color: var(--Gris-claro);
+}
+
+section.banner img,
+main section article img {
+    width: 100%;
+}
+
+section.banner img {
+    max-height: 30vh;
+}
+
+main {
+    margin: 20px auto;
+    width: 90%;
+}
+
+main section h3 {
+    font-size: 24px;
+}
+
+main section div article {
+    background-color: #FFF;
+    margin: 10px 0px;
+}
+
+main section div article div.product-main div strong.price {
+    font-size: 18px;
+}
+
+.product-view:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.product-view :hover .description {
+    display: block;
+}
+
+article.product-view div.product-main div strong.discount,
+div.product-main h4 {
+    font-size: 16px;
+}
+
+article.product-view div.product-main {
+    width: 100%;
+    border-top: 1px solid var(--Gris-claro);
+    padding: 15px;
+    position: relative;
+}
+
+article.product-view div.product-main i,
+.discount {
+    color: var(--Verde);
+}
+
+div.product-main i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--Verde);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: all 0.5s;
+}
+
+.fa-truck:hover {
+    transform: rotate(-90deg);
+}
+
+div.product-main div.product-description {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.product-description .discount {
+    margin-left: 10px;
+}
+
+article.product-view div.product-main h4 {
+    display: none;
+}
+
+
+/*views phone*/
+
+@media(min-width:361px) {
+    header div.burger-menu {
+        display: none;
+    }
+    header div.top-header div.logo {
+        width: 30%;
+    }
+    div.top-header form {
+        width: 30%;
+    }
+    div.top-header div.purchase-mode {
+        width: 40%;
+    }
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    article.product-view div.product-main h4 {
+        /*display: block;*/
+    }
+    main section div.products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    div.products article.product-view {
+        width: 45%
+    }
+}
+
+
+/*views tablet*/
+
+@media(min-width:769px) {
+    div.top-header form {
+        width: max-content;
+    }
+    div.top-header div.purchase-mode {
+        width: max-content;
+    }
+    article.product-view {
+        /*box-shadow: 0px 0px 10px rgb(100, 100, 100);*/
+    }
+    div.products article.product-view {
+        width: 23%
+    }
+    footer section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    footer section article.term {
+        width: 23%;
+    }
+}
+
+footer section article,
+div.copyritght {
+    text-align: center;
+}
+
+article.term div.term-header {
+    margin-bottom: 10px;
+}
+
+div.term-header {
+    color: var(--Celeste);
+}
+
+article.term div.term-main {
+    margin-bottom: 25px;
+}
+
+.term-header i:hover {
+    color: var(--Amarillo);
+}
+
+
+/*login*/
+
+form.form-login {
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+div.container-formLogin button:hover {
+    background-color: var(--Azul);
+    color: white;
+}
+
+form div.container-formLogin {
+    margin: 10px 0px;
+    min-width: 50%;
+}
+
+div.container-formLogin input {
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+div.formLogin-btn-ok {
+    text-align: center;
+}
+
+div.container-formLogin button {
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Celeste);
+}
+
+
+/*register*/
+
+main.main-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form.form-register {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+form.form-register div.container-camp-register {
+    margin: 10px 0px;
+    min-width: 50%;
+}
+
+div.container-camp-register>input {
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+div.container-camp-register div.body-opccion {
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+div.body-opccion label {
+    margin: 0px 5px;
+}
+
+div.container-btn-ok-cancel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.container-btn-ok-cancel button {
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--Celeste);
+}
+
+div.container-btn-ok-cancel button[type=submit]:hover {
+    background-color: var(--Verde);
+}
+
+div.container-btn-ok-cancel button[type=reset]:hover {
+    background-color: var(--Amarillo);
+}
